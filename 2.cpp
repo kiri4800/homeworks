@@ -56,7 +56,7 @@ void task_2(char* c,char* sub){
      */
     while(!f.eof()){
         c1 = new char[256];
-        cin.getline(c1,256);
+        f.getline(c1,256);
         if(sub_in_string(sub,c1)) {
             cout << c1 << endl;
             flag = true;

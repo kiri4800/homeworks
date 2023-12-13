@@ -24,7 +24,6 @@ signed main(){
      */
     while(request != 0){
         cin >> request;
-
         switch(request){
             case 1:
                 cout << "print filename(it must be in the project)" << endl;
@@ -72,6 +71,7 @@ signed main(){
                 cout << "Done" << endl;
                 break;
             case 5:
+                cout << "print filename" << endl;
                 c = new char[256]; //переменная, которая хранит в себе путь к файлу
                 cin.ignore();
                 cin.getline(c,256);

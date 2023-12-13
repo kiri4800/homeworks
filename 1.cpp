@@ -2,7 +2,7 @@
 #include <fstream>
 #include <cstring>
 using namespace std;
-char* true_sym = " .,!?:;";
+const char true_sym[8] = " .,!?:;";
 //функция для проверки, являтся ли данный символ символом - разделителем
 bool eq(char c){
     int n = 7;
@@ -38,18 +38,13 @@ int count_4_chars(char* c){
              * после операции описанной выше получаем набор символов
              * если набор является словом(состоит ТОЛЬКО из букв) и размером <= 4,то счетчик увеличиваем на 1
              */
-            if(0 < current - i <= 4 && is_alright) {
+            if(0 < current - i && current - i <= 4 && is_alright) {
                 count++;
-                for(int j = i;j < current;j++){
-                    cout << c[j];
-                }
-                cout << endl;
             }
             i = current;
         }
     }
     //очищаем кэш и возвращаем полученное количество
-    delete[] c;
     return count;
 }
 
@@ -71,6 +66,5 @@ int task_1(char* c){
     f.close(); // закрываем файл
     //очищаем кэш
     delete[] c1;
-    delete[] c;
     return current;
 }

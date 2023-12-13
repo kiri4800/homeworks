@@ -11,10 +11,8 @@ void put(ifstream &f1,ofstream &f2){
         c = new char[256];
         f1.getline(c,256);
         f2 << c << endl;
-        cout << c << " ";
     }
     delete[] c;
-    cout << endl;
 }
 void task_4(char* c,char* c1){
     /*
